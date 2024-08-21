@@ -4,7 +4,6 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\SoporteController;
-use App\Http\Controllers\DatosuserController;
 use App\Http\Controllers\EntregaRecepcionController;
 use App\Http\Controllers\ForceChangeDefaultPasswordController as FCDP;
 use App\Http\Controllers\UsuarioPendienteController;
@@ -22,7 +21,6 @@ use App\Http\Controllers\UsuarioPendienteController;
 
 Route::get('/', function () {
     return redirect()->route("dashboard.index");
-    // return Excel::download(new VacationDays, 'users.xlsx');
 });
 Route::get('/csrf-token', function () {
     $token = csrf_token();
@@ -44,8 +42,6 @@ Route::middleware(['auth:sanctum', 'verified', 'datos.completos'])->group(functi
     Route::get('/users/pendientes/{id}/autorizar', [UsuarioPendienteController::class, 'autorizar'])->name('users.autorizar');
     Route::get('/users/pendientes/{id}/rechazar', [UsuarioPendienteController::class, 'destroy'])->name('users.rechazar');
 
-    Route::get('/datosuserexcel', [App\Http\Controllers\DatosuserController::class, 'datosuserexcel']);
-
     Route::get('buscar-user/{usuario}', [App\Http\Controllers\DatosuserController::class, 'buscarUsuario']);
 
     Route::get('/get-subarea', function () {
@@ -60,13 +56,8 @@ Route::middleware(['auth:sanctum', 'verified', 'datos.completos'])->group(functi
     // Route::resource('saluds', MiSaludController::class)->middleware('register.activity');
     Route::resource('recepciones', EntregaRecepcionController::class)->names('recepcion')->middleware('register.activity');
     Route::post('/recepciones/filtro', [EntregaRecepcionController::class, 'filtrar']);
-    Route::get('/saluds/crearnota/buscar', [MiSaludController::class, 'search'])->name('crearnota.search');
-    Route::resource('datos', DatosuserController::class)->except(['create', 'edit', 'update'])->middleware('register.activity');
-    Route::get('/incapacidades/grafica', [IncapacidadController::class, 'incapacidadesGraficaDeBarras'])->name('incapacidades.graficaIncapacidades');
-    Route::post('/obtener-incapacidades', [IncapacidadController::class, 'obtenerIncapacidades'])->name('obtenerIncapacidades');
-    Route::resource('incapacidades', IncapacidadController::class)->middleware('register.activity');
-    Route::get('incapacidades/{id}/autorizar', [IncapacidadController::class, 'autorizar'])->name('incapacidades.autorizar');
-    Route::get('incapacidades/{id}/rechazar', [IncapacidadController::class, 'rechazar'])->name('incapacidades.rechazar');
+
+
     Route::post('/filtrarUsuarios', [App\Http\Controllers\UserController::class, 'filterUsers'])->name('users.filterUsers');
     Route::post('/areas', [App\Http\Controllers\UserController::class, 'areas']);
     Route::post('/subareas', [App\Http\Controllers\UserController::class, 'subareas']);
