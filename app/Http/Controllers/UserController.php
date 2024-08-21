@@ -40,11 +40,11 @@ class UserController extends Controller
             ->where('subarea', Auth::user()->datos->getSubarea->subarea_clave)
             ->get();
         $datos = $datos->keyBy('rpe');
-        
+
         $datos_rpe = Datosuser::query()
             ->where('subarea', Auth::user()->datos->getSubarea->subarea_clave)
             ->pluck('rpe');
-            
+
         $users = User::query()
             ->whereIn('rpe', $datos_rpe)
             ->where('estatus', 2) // Usuarios en estatus "Autorizado"
@@ -148,7 +148,7 @@ class UserController extends Controller
         $divisiones = $user->hasRole('admin') ? Division::all() : Division::where('division_clave', $user->datos->division)->get();
         $areas = $user->can('controlDivisional') ? $user->datos->getDivision->areas : Area::where('area_clave', $user->datos->area)->get();
         $subareas = $user->datos->getArea->subareas;
-        $roles = $user->hasRole('admin') ? 
+        $roles = $user->hasRole('admin') ?
                 Role::all() :
                 Role::whereNotIn('name', ['admin'])->get();
 
@@ -185,7 +185,7 @@ class UserController extends Controller
         $request['password'] = bcrypt($request->password);
         $request['antiguedad'] = $request->ingreso;
 
-        $user = new User($request->only(['rpe', 'email', 'password']));     
+        $user = new User($request->only(['rpe', 'email', 'password']));
 
         $user->assignRole($request->roles);
 
@@ -301,17 +301,17 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id) 
-    {   
+    public function edit($id)
+    {
         $userLogged = Auth::user();
         $user = User::FindorFail($id);
         $datos = Datosuser::where('rpe', $user->rpe)->firstOrFail();
-    
+
         $divisiones = $userLogged->hasRole('admin') ? Division::all() : Division::where('division_clave', $userLogged->datos->division)->get();
         $areas = $userLogged->can('controlDivisional') ? $userLogged->datos->getDivision->areas : Area::where('area_clave', $userLogged->datos->area)->get();
         $subareas = $userLogged->datos->getArea->subareas;
 
-        $roles = $userLogged->hasRole('admin') ? 
+        $roles = $userLogged->hasRole('admin') ?
                 Role::all() :
                 Role::whereNotIn('name', ['admin'])->get();
 
@@ -388,8 +388,8 @@ class UserController extends Controller
 
     public function inicio()
     {
-        $vc = DB::table('view_counter')->where('pagina', 'usuarios')->first()->visitas + 1;
-        DB::table('view_counter')->where('pagina', 'usuarios')->update(['visitas'=>$vc]);
+        // $vc = DB::table('view_counter')->where('pagina', 'usuarios')->first()->visitas + 1;
+        // DB::table('view_counter')->where('pagina', 'usuarios')->update(['visitas'=>$vc]);
         return view('users.inicio');
     }
 }

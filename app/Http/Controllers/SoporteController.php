@@ -40,7 +40,7 @@ class SoporteController extends Controller
     {
         $datos = Datosuser::where('rpe',Auth::user()->rpe)->firstOrFail();
         $soporte = DB::table('soportes')->get();
-         
+
         return view('soportes.crear',['datos'=>$datos,'soporte'=>$soporte]);
     }
 
@@ -52,11 +52,11 @@ class SoporteController extends Controller
      */
     public function store(Request $request)
     {
-        
+
         $request->validate([
             'fecha' => 'required',
-            'rpe' => 'required', 
-            'titulo' => 'required', 
+            'rpe' => 'required',
+            'titulo' => 'required',
             'descripcion' => 'required'
         ]);
         $fecha = $request->input('fecha');
@@ -64,10 +64,10 @@ class SoporteController extends Controller
         $titulo = $request->input('titulo');
         $descripcion = $request->input('descripcion');
         $sop = $request->all();
-        
+
         //dd($sop);
         Soporte::create($sop);
-        return redirect()->route('salud.inicio');
+        return redirect()->route('dashboard.index');
     }
 
     /**
@@ -115,7 +115,7 @@ class SoporteController extends Controller
         //
     }
 
-    
+
 
 }
 

@@ -15,7 +15,7 @@ class CreateSubareasTable extends Migration
     {
         Schema::create('subareas', function (Blueprint $table) {
             $table->id();
-            $table->string('subarea_clave');
+            $table->string('subarea_clave')->unique();
             $table->string('subarea_nombre');
             $table->string('area_id');
         });

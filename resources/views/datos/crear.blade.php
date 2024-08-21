@@ -115,7 +115,7 @@
 
                 <div class='flex items-center justify-center  md:gap-8 gap-4 pt-5 pb-5'>
                     <!-- botón cancelar -->
-                    <a href="{{ route('salud.inicio') }}" style="text-decoration: none" class="w-auto bg-gray-500 hover:bg-gray-700 rounded-lg shadow-xl font-medium text-white px-4 py-2">Cancelar</a>
+                    <a href="{{ route('dashboard.index') }}" style="text-decoration: none" class="w-auto bg-gray-500 hover:bg-gray-700 rounded-lg shadow-xl font-medium text-white px-4 py-2">Cancelar</a>
                     <!-- botón enviar -->
                     <button type="submit" class="rounded-lg bg-green-500 hover:bg-green-700 font-medium text-black px-4 py-2">Enviar</button>
                 </div>

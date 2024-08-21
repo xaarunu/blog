@@ -43,7 +43,7 @@ class DatosPersonalesController extends Controller
         $datos = $request->all();
         Datosuser::create($datos);
 
-        return redirect()->route('salud.inicio');
+        return redirect()->route('dashboard.index');
     }
 
     public function subcategorias(Request $request)

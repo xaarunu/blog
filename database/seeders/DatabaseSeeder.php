@@ -31,18 +31,18 @@ class DatabaseSeeder extends Seeder
 
         $this->call(SeccionesSeeder::class);
         $this->call(PersonalConfianzaSeeder::class);
-        $this->call(ViewCounterSeeder::class);
-        $this->call(UnidadesMedicasSeeder::class);
-        $this->call(enfermedadesSeeder::class);
+        // $this->call(ViewCounterSeeder::class);
+        // $this->call(UnidadesMedicasSeeder::class);
+        // $this->call(enfermedadesSeeder::class);
 
-        $this->call(FileTypeSeeder::class);
+        // $this->call(FileTypeSeeder::class);
         $this->call(UbicacionesArchivoSeeder::class);
-        $this->call(ArchivoGeneralSeeder::class);
-        $this->call(ResultadosAudiometriaSeeder::class);
-        $this->call(AudiometriaSeeder::class);
-        $this->call(ProSaludSeeder::class);
-        $this->call(DopingSeeder::class);
-        $this->call(PadecimientosSeeder::class);
-        $this->call(IncapacidadSeeder::class);
+        // $this->call(ArchivoGeneralSeeder::class);
+        // $this->call(ResultadosAudiometriaSeeder::class);
+        // $this->call(AudiometriaSeeder::class);
+        // $this->call(ProSaludSeeder::class);
+        // $this->call(DopingSeeder::class);
+        // $this->call(PadecimientosSeeder::class);
+        // $this->call(IncapacidadSeeder::class);
     }
 }

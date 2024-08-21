@@ -15,6 +15,8 @@ class FKDivAreasSubareas extends Migration
     {
 
         Schema::table('areas', function (Blueprint $table) {
+            $table->string('division_id')->change();
+
             $table->foreign('division_id')
             ->references('division_clave')
             ->on('divisiones')
@@ -23,6 +25,8 @@ class FKDivAreasSubareas extends Migration
         });
 
         Schema::table('subareas', function (Blueprint $table) {
+            $table->string('area_id')->change();
+
             $table->foreign('area_id')
             ->references('area_clave')
             ->on('areas')

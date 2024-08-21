@@ -35,7 +35,7 @@ class AreaSeeder extends Seeder
             Area::insert(['area_clave' => 'DU00', 'area_nombre' => 'Oficinas Divisional Golfo Centro', 'division_id' => 'DU', 'tipo' => 'Oficina Divisional']);
             Area::insert(['area_clave' => 'DV00', 'area_nombre' => 'Oficinas Divisional Centro Oriente', 'division_id' => 'DV', 'tipo' => 'Oficina Divisional']);
             Area::insert(['area_clave' => 'DW00', 'area_nombre' => 'Oficinas Divisional Peninsular', 'division_id' => 'DW', 'tipo' => 'Oficina Divisional']);
-            Area::insert(['area_clave' => 'DX00', 'area_nombre' => 'Oficinas Divisional Jalisco', 'division_id' => 'DX', 'tipo' => 'Oficina Divisional', 'sap' => 'B144']);
+            Area::insert(['area_clave' => 'DX00', 'area_nombre' => 'Oficinas Divisional Jalisco', 'division_id' => 'DX', 'tipo' => 'Oficina Divisional']);
 
 
             Area::insert(['area_clave' => 'DAC0', 'area_nombre' => 'CAR Baja California', 'division_id' => 'DA', 'tipo' => 'CAR']);
@@ -213,19 +213,19 @@ class AreaSeeder extends Seeder
             Area::insert(['area_clave' => 'DW12', 'area_nombre' => 'Zona Cancún', 'division_id' => 'DW']);
             Area::insert(['area_clave' => 'DW22', 'area_nombre' => 'Zona Riviera Maya', 'division_id' => 'DW']);
 
-            Area::insert(['area_clave' => 'DX02', 'area_nombre' => 'Zona Altos', 'division_id' => 'DX', 'sap' => 'B149']);
-            Area::insert(['area_clave' => 'DX03', 'area_nombre' => 'Zona Cienega', 'division_id' => 'DX', 'sap' => 'B150']);
-            Area::insert(['area_clave' => 'DX04', 'area_nombre' => 'Zona Zapotlán', 'division_id' => 'DX', 'sap' => 'B151']);
-            Area::insert(['area_clave' => 'DX05', 'area_nombre' => 'Zona Costa', 'division_id' => 'DX', 'sap' => 'B152']);
-            Area::insert(['area_clave' => 'DX06', 'area_nombre' => 'Zona Minas', 'division_id' => 'DX', 'sap' => 'B153']);
-            Area::insert(['area_clave' => 'DX07', 'area_nombre' => 'Zona Chapala', 'division_id' => 'DX', 'sap' => 'B154']);
-            Area::insert(['area_clave' => 'DX11', 'area_nombre' => 'Zona Santiago', 'division_id' => 'DX', 'sap' => 'B155']);
-            Area::insert(['area_clave' => 'DX12', 'area_nombre' => 'Zona Tepic', 'division_id' => 'DX', 'sap' => 'B156']);
-            Area::insert(['area_clave' => 'DX13', 'area_nombre' => 'Zona Vallarta', 'division_id' => 'DX', 'sap' => 'B157']);
-            Area::insert(['area_clave' => 'DX14', 'area_nombre' => 'Zona Hidalgo', 'division_id' => 'DX', 'sap' => 'B147']);
-            Area::insert(['area_clave' => 'DX15', 'area_nombre' => 'Zona Juárez', 'division_id' => 'DX', 'sap' => 'B145']);
-            Area::insert(['area_clave' => 'DX16', 'area_nombre' => 'Zona Libertad', 'division_id' => 'DX', 'sap' => 'B146']);
-            Area::insert(['area_clave' => 'DX17', 'area_nombre' => 'Zona Reforma', 'division_id' => 'DX', 'sap' => 'B169']);
+            Area::insert(['area_clave' => 'DX02', 'area_nombre' => 'Zona Altos', 'division_id' => 'DX']);
+            Area::insert(['area_clave' => 'DX03', 'area_nombre' => 'Zona Cienega', 'division_id' => 'DX']);
+            Area::insert(['area_clave' => 'DX04', 'area_nombre' => 'Zona Zapotlán', 'division_id' => 'DX']);
+            Area::insert(['area_clave' => 'DX05', 'area_nombre' => 'Zona Costa', 'division_id' => 'DX']);
+            Area::insert(['area_clave' => 'DX06', 'area_nombre' => 'Zona Minas', 'division_id' => 'DX']);
+            Area::insert(['area_clave' => 'DX07', 'area_nombre' => 'Zona Chapala', 'division_id' => 'DX']);
+            Area::insert(['area_clave' => 'DX11', 'area_nombre' => 'Zona Santiago', 'division_id' => 'DX']);
+            Area::insert(['area_clave' => 'DX12', 'area_nombre' => 'Zona Tepic', 'division_id' => 'DX']);
+            Area::insert(['area_clave' => 'DX13', 'area_nombre' => 'Zona Vallarta', 'division_id' => 'DX']);
+            Area::insert(['area_clave' => 'DX14', 'area_nombre' => 'Zona Hidalgo', 'division_id' => 'DX']);
+            Area::insert(['area_clave' => 'DX15', 'area_nombre' => 'Zona Juárez', 'division_id' => 'DX']);
+            Area::insert(['area_clave' => 'DX16', 'area_nombre' => 'Zona Libertad', 'division_id' => 'DX']);
+            Area::insert(['area_clave' => 'DX17', 'area_nombre' => 'Zona Reforma', 'division_id' => 'DX']);
 
             Area::insert(['area_clave' => 'DXSU', 'area_nombre' => 'SUTERM', 'division_id' => 'DX']);
         //];
