@@ -1,7 +1,7 @@
 <title>DCJ - CFE</title>
 <x-guest-layout>
     <x-jet-authentication-card>
-        <h2 class="text-center text-2xl">CFEBienestar</h2>
+        <h2 class="text-center text-2xl">Nombre de tu Sistema</h2>
         <x-slot name="logo">
             {{-- <x-jet-authentication-card-logo /> --}}
             <img src="{{ asset('assets/cfe.png') }}" alt="CFE" width="130" height="130"/>
