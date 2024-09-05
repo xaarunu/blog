@@ -71,12 +71,7 @@ class AuthServiceProvider extends ServiceProvider
                 'password' => $request->password,
                 'estatus' => 2
             ])) {
-                if (Auth::user()->hasRole('usuario')) {
-                    Auth::logout();
-                    $user = false;
-                } else {
-                    $user = User::firstWhere('rpe', $request->rpe);
-                }
+                $user = User::firstWhere('rpe', $request->rpe);
             } else {
                 $user = null;
             }
