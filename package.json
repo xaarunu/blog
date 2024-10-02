@@ -25,6 +25,7 @@
     },
     "dependencies": {
         "aos": "^2.3.4",
+        "chart.js": "^4.4.4",
         "composer": "^4.1.0",
         "pikaday": "^1.8.2"
     }

@@ -1,5 +1,5 @@
 {{-- Botón de regreso --}}
-<div class="mx-auto mt-4 px-4 py-3 lg:w-8/12 w-11/12 leading-normal text-green-500 rounded-lg">
+<div class="ml-40 mt-4 px-4 py-3 lg:w-8/12 w-11/12 leading-normal text-green-500 rounded-lg">
     <div class="text-left">
         <a href="{{ route('dashboard.index') }}"
             class='w-auto bg-green-500 hover-bg-green-600 rounded-lg shadow-xl font-medium text-white px-4 py-2'>

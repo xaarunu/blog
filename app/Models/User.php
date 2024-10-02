@@ -82,4 +82,9 @@ class User extends Authenticatable
     {
         return $this->hasMany(usuario_enfermedad::class, 'rpe', 'rpe');
     }
+
+    public function blogs()
+    {
+        return $this->hasMany(Blog::class, 'rpe', 'rpe');
+    }
 }

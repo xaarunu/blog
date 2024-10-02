@@ -6,6 +6,7 @@
             {{ __('Crear Usuario') }}
         </h2>
     </x-slot>
+    
     <div class="py-12">
         <x-boton-regresar />
         <x-user-data-form :areas="$areas" :subareas="$subareas" :divisiones="$divisiones" :roles="$roles"/>

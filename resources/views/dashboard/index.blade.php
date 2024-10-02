@@ -50,6 +50,27 @@
                         </div>
 
 
+                        <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5">
+                            {{-- <a href="{{ route('#') }}" class="card-link"> --}}
+                            <a href="{{ route('blogs.index') }}" class="card-link">
+                                <div class="icon-box service-box" data-aos="fade-up"
+                                    data-aos-delay="{{ $delay = ($delay % $max) + $espacio }}">
+                                    <div class="icon">
+                                        {{-- <i class="bx bx-pulse"></i> --}}
+                                        <svg class="iconos" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill="currentColor" d="M19 3H5C3.895 3 3 3.895 3 5v14c0 1.105.895 2 2 2h14c1.105 0 2-.895 2-2V5c0-1.105-.895-2-2-2zM7 6h10v2H7V6zm0 4h10v2H7v-2zm0 4h7v2H7v-2z"/>
+                                          </svg>
+                                          
+                                          
+                                    </div>
+                                    <h4 class="title">Blogs de los usuarios</h4>
+                                    <p class="description">Ver los blogs de los usuarios
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+
+
                         {{-- <!-- ======= Contenedor para centrar el aviso ======= -->
                         @if (!Auth::user()->hasAnyRole(['usuario','admin','RecursosHumanos','JefeRecursosHumanos','Doctora']))
                             <div class="container text-center my-5">
